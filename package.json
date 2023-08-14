@@ -1,0 +1,14 @@
+{
+  "name": "element-plus-pro",
+  "version": "0.0.0",
+  "description": "Element-Plus在具体生产开发中针对特定业务/场景的二次封装",
+  "main": "dist/index.js",
+  "scripts": {},
+  "keywords": [
+    "Element-Plus",
+    "二次封装",
+    "业务组件"
+  ],
+  "author": "Shawn Yuan",
+  "license": "ISC"
+}
