@@ -1,6 +1,8 @@
 {
   "name": "element-plus-pro",
+  "private": true,
   "version": "0.0.0",
+  "type": "module",
   "description": "Element-Plus在具体生产开发中针对特定业务/场景的二次封装",
   "main": "dist/index.js",
   "scripts": {},
