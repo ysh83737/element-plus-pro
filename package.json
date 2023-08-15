@@ -5,12 +5,22 @@
   "type": "module",
   "description": "Element-Plus在具体生产开发中针对特定业务/场景的二次封装",
   "main": "dist/index.js",
-  "scripts": {},
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install"
+  },
   "keywords": [
     "Element-Plus",
     "二次封装",
     "业务组件"
   ],
   "author": "Shawn Yuan",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-angular": "^17.7.0",
+    "@commitlint/config-angular-type-enum": "^17.4.0",
+    "@commitlint/types": "^17.4.4",
+    "husky": "^8.0.3"
+  }
 }
