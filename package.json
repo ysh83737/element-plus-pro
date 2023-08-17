@@ -8,6 +8,8 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
+    "stylelint": "stylelint \"example/**/*.{vue,scss,css}\"",
+    "stylelint:fix": "stylelint \"example/**/*.{vue,scss,css}\" --fix",
     "lint": "echo \"no lint script\""
   },
   "keywords": [
