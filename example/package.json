@@ -8,7 +8,11 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "eslint": "eslint --ext .ts,.vue src",
-    "eslint:fix": "eslint --ext .ts,.vue src --fix"
+    "eslint:fix": "eslint --ext .ts,.vue src --fix",
+    "stylelint": "stylelint \"src/**/*.{vue,scss,css}\"",
+    "stylelint:fix": "stylelint \"src/**/*.{vue,scss,css}\" --fix",
+    "lint": "npm run eslint && npm run stylelint",
+    "lint:fix": "npm run eslint:fix && npm run stylelint:fix"
   },
   "dependencies": {
     "vue": "^3.3.4"
