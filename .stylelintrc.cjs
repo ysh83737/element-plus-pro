@@ -21,5 +21,12 @@ module.exports = {
     'no-eol-whitespace': true,
     'no-missing-end-of-source-newline': true,
     'block-no-empty': true,
+    'selector-class-pattern': null,
+    'scss/at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['tailwind']
+      }
+    ],
   },
 };
