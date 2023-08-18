@@ -1,0 +1,11 @@
+.elp-line-clamp-text {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--elp-line-clamp-text-count);
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.elp-line-clamp-text__popper {
+  max-width: 250px;
+}

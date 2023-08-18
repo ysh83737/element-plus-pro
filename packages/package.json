@@ -1,0 +1,20 @@
+{
+  "name": "element-plus-pro",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "module": "index.ts",
+  "scripts": {
+    "eslint": "eslint --ext .ts,.vue .",
+    "eslint:fix": "eslint --ext .ts,.vue . --fix",
+    "stylelint": "stylelint \"./**/*.{vue,scss,css}\"",
+    "stylelint:fix": "stylelint \"./**/*.{vue,scss,css}\" --fix",
+    "lint": "npm run eslint && npm run stylelint",
+    "lint:fix": "npm run eslint:fix && npm run stylelint:fix"
+  },
+  "dependencies": {
+    "element-plus": "^2.3.9",
+    "vue": "^3.3.4"
+  }
+}
