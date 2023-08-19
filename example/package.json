@@ -15,6 +15,7 @@
     "lint:fix": "npm run eslint:fix && npm run stylelint:fix"
   },
   "dependencies": {
+    "element-plus-pro": "^0.0.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
