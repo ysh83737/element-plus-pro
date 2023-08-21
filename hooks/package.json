@@ -1,0 +1,15 @@
+{
+  "name": "@element-plus-pro/hooks",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "module": "index.ts",
+  "typings": "./index.d.ts",
+  "scripts": {
+    "eslint": "eslint --ext .ts .",
+    "eslint:fix": "eslint --ext .ts . --fix",
+    "lint": "npm run eslint",
+    "lint:fix": "npm run eslint:fix:fix"
+  }
+}
