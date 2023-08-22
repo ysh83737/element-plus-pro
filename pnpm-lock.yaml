@@ -42,8 +42,10 @@ importers:
 
   example:
     specifiers:
+      '@element-plus-pro/hooks': ^0.0.0
       '@vitejs/plugin-vue': ^4.2.3
       autoprefixer: ^10.4.15
+      element-plus: ^2.3.9
       element-plus-pro: ^0.0.0
       postcss: ^8.4.28
       sass: ^1.65.1
@@ -53,6 +55,8 @@ importers:
       vue: ^3.3.4
       vue-tsc: ^1.8.5
     dependencies:
+      '@element-plus-pro/hooks': link:../hooks
+      element-plus: 2.3.9_vue@3.3.4
       element-plus-pro: link:../packages
       vue: 3.3.4
     devDependencies:
@@ -64,6 +68,9 @@ importers:
       typescript: 5.1.6
       vite: 4.4.9_sass@1.65.1
       vue-tsc: 1.8.8_typescript@5.1.6
+
+  hooks:
+    specifiers: {}
 
   packages:
 
