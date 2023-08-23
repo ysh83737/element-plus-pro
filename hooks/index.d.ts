@@ -1,1 +1,1 @@
-export * from './src/useRemoteCache';
+export * from './index';
