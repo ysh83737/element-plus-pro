@@ -43,8 +43,12 @@ importers:
   docs:
     specifiers:
       '@element-plus-pro/hooks': ^0.0.0
+      autoprefixer: ^10.4.15
       element-plus: ^2.3.9
       element-plus-pro: ^0.0.0
+      postcss: ^8.4.28
+      sass: ^1.65.1
+      tailwindcss: ^3.3.3
       vitepress: ^1.0.0-rc.4
       vue: ^3.3.4
     dependencies:
@@ -53,7 +57,11 @@ importers:
       element-plus-pro: link:../packages
       vue: 3.3.4
     devDependencies:
-      vitepress: 1.0.0-rc.4
+      autoprefixer: 10.4.15_postcss@8.4.28
+      postcss: 8.4.28
+      sass: 1.65.1
+      tailwindcss: 3.3.3
+      vitepress: 1.0.0-rc.4_sass@1.65.1
 
   example:
     specifiers:
@@ -3815,41 +3823,6 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite/4.4.9:
-    resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': '>= 14'
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      esbuild: 0.18.20
-      postcss: 8.4.28
-      rollup: 3.28.0
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
   /vite/4.4.9_sass@1.65.1:
     resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -3886,7 +3859,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-rc.4:
+  /vitepress/1.0.0-rc.4_sass@1.65.1:
     resolution: {integrity: sha512-JCQ89Bm6ECUTnyzyas3JENo00UDJeK8q1SUQyJYou+4Yz5BKEc/F3O21cu++DnUT2zXc0kvQ2Aj4BZCc/nioXQ==}
     hasBin: true
     dependencies:
@@ -3901,7 +3874,7 @@ packages:
       mark.js: 8.11.1
       minisearch: 6.1.0
       shiki: 0.14.3
-      vite: 4.4.9
+      vite: 4.4.9_sass@1.65.1
       vue: 3.3.4
     transitivePeerDependencies:
       - '@algolia/client-search'
