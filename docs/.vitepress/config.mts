@@ -16,15 +16,15 @@ export default defineConfig({
       {
         text: 'Components',
         items: [
-          { text: 'Index', link: '/components/index' },
-          { text: 'useRemoteQueue', link: '/components/useRemoteQueue/index' }
+          { text: 'Index', link: '/components/index' }
         ]
       },
       {
         text: 'Hooks',
         items: [
           { text: 'Index', link: '/hooks/index' },
-          { text: 'useRemoteCache', link: '/components/useRemoteCache/index' }
+          { text: 'useRemoteQueue', link: '/hooks/useRemoteQueue/index' },
+          { text: 'useRemoteCache', link: '/hooks/useRemoteCache/index' }
         ]
       }
     ],
