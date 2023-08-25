@@ -1,7 +1,6 @@
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type Params = any;
-type RemoteMethod<T> = (params: Params) => Promise<T>;
+type RemoteMethod<P, R> = (params: P) => Promise<R>;
 type QueueItem = () => Promise<void>;
 
 /**
@@ -10,14 +9,14 @@ type QueueItem = () => Promise<void>;
  * @param remoteMethod the remote(request) method
  * @param interval the interval between requests
  */
-export function useRemoteQueue<T>(remoteMethod: RemoteMethod<T>, interval?: number) {
+export function useRemoteQueue<P, R>(remoteMethod: RemoteMethod<P, R>, interval?: number) {
   /** request queue */
   let queue: QueueItem[] = [];
   /** doing remote request */
   let loading = false;
 
-  async function doRemote(params: Params): Promise<T> {
-    const result = new Promise<T>((resolve) => {
+  async function doRemote(params: P): Promise<R> {
+    const result = new Promise<R>((resolve) => {
       queue.push(() => {
         return remoteMethod(params)
           .then(resolve)
@@ -25,7 +24,7 @@ export function useRemoteQueue<T>(remoteMethod: RemoteMethod<T>, interval?: numb
           .finally(() => {
             // release closure variables
             resolve = null as never;
-            params = null;
+            params = null as never;
           });
       });
     });
