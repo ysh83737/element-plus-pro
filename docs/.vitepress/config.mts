@@ -16,7 +16,8 @@ export default defineConfig({
       {
         text: 'Components',
         items: [
-          { text: 'Index', link: '/components/index' }
+          { text: 'Index', link: '/components/index' },
+          { text: 'useRemoteQueue', link: '/components/useRemoteQueue/index' }
         ]
       },
       {
