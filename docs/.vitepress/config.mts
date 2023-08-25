@@ -23,7 +23,8 @@ export default defineConfig({
       {
         text: 'Hooks',
         items: [
-          { text: 'Index', link: '/hooks/index' }
+          { text: 'Index', link: '/hooks/index' },
+          { text: 'useRemoteCache', link: '/components/useRemoteCache/index' }
         ]
       }
     ],
