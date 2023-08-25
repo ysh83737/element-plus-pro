@@ -2,7 +2,7 @@
 import { ElButton, ElScrollbar } from 'element-plus';
 import 'element-plus/es/components/button/style/index';
 import 'element-plus/es/components/scrollbar/style/index';
-import { onBeforeUnmount, ref } from 'vue';
+import { onBeforeUnmount, shallowRef } from 'vue';
 import { useRemoteQueue } from '@element-plus-pro/hooks';
 import { remoteRequest } from './demoData';
 
@@ -19,7 +19,7 @@ export default {
 <script lang="ts" setup>
 let counter = 0;
 
-const normalResults = ref<Result[]>([]);
+const normalResults = shallowRef<Result[]>([]);
 async function onNormalLoad() {
   counter++;
   const result: Result = { counter, type: RESULT_TYPE.SUCCESS, message: '' };
@@ -29,12 +29,12 @@ async function onNormalLoad() {
     result.type = RESULT_TYPE.FAIL;
     result.message = error;
   }
-  normalResults.value.push(result);
+  normalResults.value = [...normalResults.value, result];
 }
 
 const { remoteMethod, clear } = useRemoteQueue(remoteRequest);
 
-const queueResults = ref<Result[]>([]);
+const queueResults = shallowRef<Result[]>([]);
 async function onQueueLoad() {
   counter++;
   const result: Result = { counter, type: RESULT_TYPE.SUCCESS, message: '' };
@@ -44,7 +44,7 @@ async function onQueueLoad() {
     result.type = RESULT_TYPE.FAIL;
     result.message = error;
   }
-  queueResults.value.push(result);
+  queueResults.value = [...queueResults.value, result];
 }
 onBeforeUnmount(() => {
   clear();

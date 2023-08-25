@@ -1,7 +1,7 @@
 <script lang="ts">
 import { ElSelect, ElOption } from 'element-plus';
 import 'element-plus/es/components/select/style/index';
-import { onBeforeUnmount, ref } from 'vue';
+import { onBeforeUnmount, ref, shallowRef } from 'vue';
 import { useRemoteCache } from '@element-plus-pro/hooks';
 import { getDemoOptions, Option } from './demoData';
 
@@ -11,7 +11,7 @@ export default {
 </script>
 <script lang="ts" setup>
 const value = ref('');
-const options = ref<Option[]>([]);
+const options = shallowRef<Option[]>([]);
 
 const { remoteMethod, clear } = useRemoteCache<string, Option[]>(getDemoOptions);
 
