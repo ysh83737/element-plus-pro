@@ -1,19 +1,17 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type Keyword = any;
-type RemoteMethod<T> = (keyword: Keyword) => Promise<T>;
+type RemoteMethod<P, R> = (keyword: P) => Promise<R>;
 
 /**
  * load and cache remote(request) data
  * @param remoteMethod the remote(request) method
  */
-export function useRemoteCache<T>(remoteMethod: RemoteMethod<T>) {
+export function useRemoteCache<P, R>(remoteMethod: RemoteMethod<P, R>) {
   /** data cache map */
-  let cache = new Map<Keyword, T>();
+  let cache = new Map<P, R>();
 
-  async function doRemote(keyword: Keyword) {
-    let result = cache.get(keyword) as T;
+  async function doRemote(keyword: P) {
+    let result = cache.get(keyword) as R;
     if (!result) {
-      result = remoteMethod(keyword) as T;
+      result = remoteMethod(keyword) as R;
       cache.set(keyword, result);
     }
     if (result instanceof Promise) {

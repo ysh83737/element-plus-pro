@@ -1,5 +1,4 @@
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type RemoteMethod<P, R> = (params: P) => Promise<R>;
 type QueueItem = () => Promise<void>;
 
