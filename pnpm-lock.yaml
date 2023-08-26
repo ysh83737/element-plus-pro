@@ -43,12 +43,14 @@ importers:
   docs:
     specifiers:
       '@element-plus-pro/hooks': ^0.0.0
+      '@types/node': ^20.5.6
       autoprefixer: ^10.4.15
       element-plus: ^2.3.9
       element-plus-pro: ^0.0.0
       postcss: ^8.4.28
       sass: ^1.65.1
       tailwindcss: ^3.3.3
+      vite: ^4.4.5
       vitepress: ^1.0.0-rc.4
       vue: ^3.3.4
     dependencies:
@@ -57,11 +59,13 @@ importers:
       element-plus-pro: link:../packages
       vue: 3.3.4
     devDependencies:
+      '@types/node': 20.5.6
       autoprefixer: 10.4.15_postcss@8.4.28
       postcss: 8.4.28
       sass: 1.65.1
       tailwindcss: 3.3.3
-      vitepress: 1.0.0-rc.4_sass@1.65.1
+      vite: 4.4.9_hrggpaqushjm2tm3s7aly5bc5i
+      vitepress: 1.0.0-rc.4_hrggpaqushjm2tm3s7aly5bc5i
 
   example:
     specifiers:
@@ -921,6 +925,10 @@ packages:
     resolution: {integrity: sha512-bUBrPjEry2QUTsnuEjzjbS7voGWCc30W0qzgMf90GPeDGFRakvrz47ju+oqDAKCXLUCe39u57/ORMl/O/04/9g==}
     dev: true
 
+  /@types/node/20.5.6:
+    resolution: {integrity: sha512-Gi5wRGPbbyOTX+4Y2iULQ27oUPrefaB0PxGQJnfyWN3kvEDGM3mIB5M/gQLmitZf7A9FmLeaqxD3L1CXpm3VKQ==}
+    dev: true
+
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: true
@@ -1075,7 +1083,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.4.9_sass@1.65.1
+      vite: 4.4.9_hrggpaqushjm2tm3s7aly5bc5i
       vue: 3.3.4
     dev: true
 
@@ -3823,6 +3831,43 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
+  /vite/4.4.9_hrggpaqushjm2tm3s7aly5bc5i:
+    resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': '>= 14'
+      less: '*'
+      lightningcss: ^1.21.0
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+    dependencies:
+      '@types/node': 20.5.6
+      esbuild: 0.18.20
+      postcss: 8.4.28
+      rollup: 3.28.0
+      sass: 1.65.1
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
   /vite/4.4.9_sass@1.65.1:
     resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -3859,7 +3904,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-rc.4_sass@1.65.1:
+  /vitepress/1.0.0-rc.4_hrggpaqushjm2tm3s7aly5bc5i:
     resolution: {integrity: sha512-JCQ89Bm6ECUTnyzyas3JENo00UDJeK8q1SUQyJYou+4Yz5BKEc/F3O21cu++DnUT2zXc0kvQ2Aj4BZCc/nioXQ==}
     hasBin: true
     dependencies:
@@ -3874,7 +3919,7 @@ packages:
       mark.js: 8.11.1
       minisearch: 6.1.0
       shiki: 0.14.3
-      vite: 4.4.9_sass@1.65.1
+      vite: 4.4.9_hrggpaqushjm2tm3s7aly5bc5i
       vue: 3.3.4
     transitivePeerDependencies:
       - '@algolia/client-search'
