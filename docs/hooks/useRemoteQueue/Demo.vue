@@ -13,7 +13,7 @@ enum RESULT_TYPE {
 interface Result { counter: number, type: RESULT_TYPE, message: string}
 
 export default {
-  name: 'DemoUseRemoteCache'
+  name: 'DemoUseRemoteQueue'
 };
 </script>
 <script lang="ts" setup>
