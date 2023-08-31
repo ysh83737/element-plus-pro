@@ -23,7 +23,7 @@ export default defineConfig({
         text: 'Hooks',
         items: [
           { text: 'Index', link: '/hooks/index' },
-          { text: 'useRemoteQueue', link: '/hooks/useRemoteQueue/index' },
+          { text: 'useAsyncSerial', link: '/hooks/useAsyncSerial/index' },
           { text: 'useRemoteCache', link: '/hooks/useRemoteCache/index' }
         ]
       }
