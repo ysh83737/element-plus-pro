@@ -9,7 +9,7 @@ Turn asynchronous tasks into serial execution instead of parallel execution. Goo
 ## Usage
 
 ```ts
-import { useAsyncSerial } from '@vueuse/core'
+import { useAsyncSerial } from '@element-plus-pro/hooks'
 
 function asyncTask() {
   // do something
@@ -33,7 +33,7 @@ Using `useAsyncSerial` can avoid the API reporting errors and unexpected situati
 
 ::: code-group
 ```ts [example-api.ts]
-import { useAsyncSerial } from '@vueuse/core'
+import { useAsyncSerial } from '@element-plus-pro/hooks'
 
 let loading = false
 function asyncTask(): Promise<string> {
