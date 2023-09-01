@@ -1,2 +1,2 @@
-export * from './src/useRemoteCache';
+export * from './src/useAsyncCache';
 export * from './src/useAsyncSerial';
