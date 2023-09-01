@@ -24,7 +24,7 @@ export default defineConfig({
         items: [
           { text: 'Index', link: '/hooks/index' },
           { text: 'useAsyncSerial', link: '/hooks/useAsyncSerial/index' },
-          { text: 'useRemoteCache', link: '/hooks/useRemoteCache/index' }
+          { text: 'useAsyncCache', link: '/hooks/useAsyncCache/index' }
         ]
       }
     ],

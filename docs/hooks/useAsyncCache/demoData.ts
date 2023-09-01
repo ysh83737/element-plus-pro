@@ -1,7 +1,7 @@
 export type Option = { value: number; label: string; keyword: string };
 
 export function getDemoOptions(keyword: string): Promise<Option[]> {
-  console.log('模拟实际请求', keyword);
+  console.log('get demo options: ', keyword);
   const len = 10 + Math.round(Math.random() * 20); // 10~30
   return new Promise((resolve) => {
     setTimeout(() => {

@@ -2,18 +2,18 @@
 import { ElSelect, ElOption } from 'element-plus';
 import 'element-plus/es/components/select/style/index';
 import { onBeforeUnmount, ref, shallowRef } from 'vue';
-import { useRemoteCache } from '@element-plus-pro/hooks';
+import { useAsyncCache } from '@element-plus-pro/hooks';
 import { getDemoOptions, Option } from './demoData';
 
 export default {
-  name: 'DemoUseRemoteCache',
+  name: 'DemoUseAsyncCache',
 };
 </script>
 <script lang="ts" setup>
 const value = ref('');
 const options = shallowRef<Option[]>([]);
 
-const { remoteMethod, clear } = useRemoteCache<string, Option[]>(getDemoOptions);
+const { task, clear } = useAsyncCache(getDemoOptions);
 
 const loading = ref(false);
 async function doRemote(keyword: string) {
@@ -23,7 +23,7 @@ async function doRemote(keyword: string) {
     return;
   }
   loading.value = true;
-  options.value = await remoteMethod(keyword);
+  options.value = await task(keyword);
   loading.value = false;
 }
 
